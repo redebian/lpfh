@@ -26,6 +26,19 @@ class AuthUser extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+
+	protected function afterValidate()
+	{
+		parent::afterValidate();
+		$this->password = $this->encrypt($this->password);
+	}
+
+	public function encrypt($value)
+	{
+		return md5($value);
+	}
+
+
 	public function tableName()
 	{
 		return 'auth_user';
