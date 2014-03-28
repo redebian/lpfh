@@ -1,0 +1,1369 @@
+2014/03/18 15:51:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "giit".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('giit')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=giit
+---
+2014/03/18 15:51:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gii
+---
+2014/03/19 16:01:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `about` (`id`, `content`) VALUES (:yp0, :yp1).
+in /var/www/adr/protected/controllers/AboutController.php (73)
+in /var/www/adr/index.php (13)
+2014/03/19 16:01:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `about` (`id`, `content`) VALUES (:yp0, :yp1)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/adr/protected/controllers/AboutController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): AboutController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/create')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/adr/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/adr/index.php?r=about/create
+HTTP_REFERER=http://localhost/adr/index.php?r=about/create
+---
+2014/03/19 16:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('frontend')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=frontend
+---
+2014/03/19 16:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontendcontroller".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('frontendcontrol...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=frontendcontroller
+---
+2014/03/19 16:24:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "frontend/about".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('frontend/about')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=frontend/about
+---
+2014/03/19 16:33:36 [error] [php] include(Issue.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/adr/protected/controllers/FrontEndController.php(14): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/controllers/FrontEndController.php (14)
+in /var/www/adr/index.php (13)
+2014/03/19 16:33:39 [error] [php] include(Issue.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/adr/protected/controllers/FrontEndController.php(14): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/controllers/FrontEndController.php (14)
+in /var/www/adr/index.php (13)
+2014/03/19 16:33:58 [error] [php] include(Issue.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/adr/protected/controllers/FrontEndController.php(14): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/controllers/FrontEndController.php (14)
+in /var/www/adr/index.php (13)
+2014/03/19 16:34:17 [error] [php] include(Issue.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/adr/protected/controllers/FrontEndController.php(14): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/controllers/FrontEndController.php (14)
+in /var/www/adr/index.php (13)
+2014/03/19 16:38:39 [error] [php] Array to string conversion (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:42:14 [error] [php] Trying to get property of non-object (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:45:52 [error] [php] Undefined variable: id (/var/www/adr/protected/controllers/FrontEndController.php:16)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#5 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:46:04 [error] [exception.CException] exception 'CException' with message 'FrontEndController and its behaviors do not have a method or closure named "loadModel".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/adr/protected/controllers/FrontEndController.php(16): CComponent->__call('loadModel', Array)
+#1 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->loadModel()
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/about')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/adr/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+---
+2014/03/19 16:46:29 [error] [php] Trying to get property of non-object (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:47:40 [error] [php] Trying to get property of non-object (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:47:50 [error] [php] Trying to get property of non-object (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:48:01 [error] [php] Trying to get property of non-object (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:48:46 [error] [php] Undefined variable: model (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:50:47 [error] [php] Undefined variable: message (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:51:09 [error] [php] Array to string conversion (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:53:26 [error] [php] Array to string conversion (/var/www/adr/protected/views/frontEnd/about.php:23)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (23)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:54:27 [error] [php] Undefined variable: models (/var/www/adr/protected/views/frontEnd/about.php:24)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (24)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 16:54:35 [error] [php] Undefined variable: models (/var/www/adr/protected/views/frontEnd/about.php:24)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): FrontEndController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): FrontEndController->renderPartial()
+#2 /var/www/adr/protected/controllers/FrontEndController.php(16): FrontEndController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): FrontEndController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): FrontEndController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): FrontEndController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+in /var/www/adr/protected/views/frontEnd/about.php (24)
+in /var/www/adr/protected/controllers/FrontEndController.php (16)
+in /var/www/adr/index.php (13)
+2014/03/19 17:05:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ricozy.about' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `about`.
+in /var/www/adr/index.php (13)
+2014/03/19 17:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "price".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('price')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:43:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "price".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('price')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:51:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 17:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "price".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('price')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/adr/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+---
+2014/03/19 17:53:08 [error] [exception.CException] exception 'CException' with message 'Property "Price.content" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('content')
+#1 /var/www/adr/protected/views/frontEnd/about.php(17): CActiveRecord->__get('content')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/adr/pr...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/adr/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/adr/pr...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('about', Array, true)
+#6 /var/www/adr/protected/controllers/FrontEndController.php(23): CController->render('about', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/adr/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+---
+2014/03/19 17:54:02 [error] [exception.CException] exception 'CException' with message 'Property "Price.content" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('content')
+#1 /var/www/adr/protected/views/frontEnd/about.php(17): CActiveRecord->__get('content')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/adr/pr...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/adr/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/adr/pr...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('about', Array, true)
+#6 /var/www/adr/protected/controllers/FrontEndController.php(23): CController->render('about', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/adr/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+---
+2014/03/19 17:55:51 [error] [exception.CException] exception 'CException' with message 'FrontEndController cannot find the requested view "price".' in /var/www/yii/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('price', Array, true)
+#1 /var/www/adr/protected/controllers/FrontEndController.php(23): CController->render('price', Array)
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#7 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#8 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/adr/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+---
+2014/03/19 18:04:39 [error] [exception.CException] exception 'CException' with message 'Property "Price.tipe" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('tipe')
+#1 /var/www/adr/protected/views/frontEnd/price.php(29): CActiveRecord->__get('tipe')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/adr/pr...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/adr/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/adr/pr...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('price', Array, true)
+#6 /var/www/adr/protected/controllers/FrontEndController.php(23): CController->render('price', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/adr/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/index.php?
+---
+2014/03/19 18:04:47 [error] [exception.CException] exception 'CException' with message 'Property "Price.tipe" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('tipe')
+#1 /var/www/adr/protected/views/frontEnd/price.php(29): CActiveRecord->__get('tipe')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/adr/pr...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/adr/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/adr/pr...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('price', Array, true)
+#6 /var/www/adr/protected/controllers/FrontEndController.php(23): CController->render('price', Array)
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/adr/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+---
+2014/03/19 18:24:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/index.php?r=FrontEnd/
+---
+2014/03/19 18:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('contact')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=contact
+HTTP_REFERER=http://localhost/adr/index.php?r=FrontEnd/
+---
+2014/03/19 18:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/
+---
+2014/03/19 18:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/
+---
+2014/03/19 18:34:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/index.php?r=FrontEnd/
+---
+2014/03/19 18:34:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/index.php?r=FrontEnd/
+---
+2014/03/19 18:34:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/index.php?r=FrontEnd/
+---
+2014/03/19 18:34:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gallery".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gallery')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=gallery
+HTTP_REFERER=http://localhost/adr/index.php?r=FrontEnd/
+---
+2014/03/19 10:53:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'ricozy'' in /var/www/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /var/www/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /var/www/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /var/www/yii/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /var/www/yii/framework/db/ar/CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 /var/www/yii/framework/db/ar/CActiveRecord.php(1469): CActiveRecord->getCommandBuilder()
+#7 /var/www/adr/protected/controllers/FrontEndController.php(14): CActiveRecord->findAll()
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionAbout()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/about')
+#14 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/adr/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/about
+HTTP_REFERER=http://localhost/adr/
+---
+2014/03/19 10:54:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ricozy.price' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `price`.
+in /var/www/adr/protected/controllers/FrontEndController.php (21)
+in /var/www/adr/index.php (13)
+2014/03/19 10:54:54 [error] [exception.CDbException] exception 'CDbException' with message 'The table "price" for active record class "Price" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Price))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/adr/protected/controllers/FrontEndController.php(21): CActiveRecord->findAll()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#10 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#11 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/adr/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/
+---
+2014/03/19 10:55:17 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 17:59:52 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:00:14 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:01:38 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:01:39 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:01:39 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:01:39 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:15 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:16 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:16 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:16 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:17 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:17 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:17 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:17 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:02:55 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:03:53 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/18 18:06:03 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (/var/www/adr/protected/views/layouts/main.php:52)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /var/www/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#2 /var/www/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#3 /var/www/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 /var/www/yii/framework/web/CBaseController.php(206): CContentDecorator->run()
+#5 /var/www/yii/framework/web/CBaseController.php(300): SiteController->endWidget()
+#6 /var/www/adr/protected/views/layouts/column1.php(6): SiteController->endContent()
+#7 /var/www/yii/framework/web/CBaseController.php(126): require()
+#8 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /var/www/yii/framework/web/CController.php(784): SiteController->renderFile()
+#10 /var/www/adr/protected/controllers/SiteController.php(98): SiteController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#14 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#15 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CWebApplication->run()
+REQUEST_URI=/adr/index.php?r=site/login
+in /var/www/adr/protected/views/layouts/main.php (52)
+in /var/www/adr/protected/views/layouts/column1.php (6)
+in /var/www/adr/protected/controllers/SiteController.php (98)
+2014/03/19 01:15:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ricozy.price' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `price`.
+in /var/www/adr/protected/views/price/index.php (20)
+in /var/www/adr/protected/controllers/PriceController.php (128)
+in /var/www/adr/index.php (13)
+2014/03/19 01:15:08 [error] [exception.CDbException] exception 'CDbException' with message 'The table "price" for active record class "Price" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Price))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/adr/protected/views/price/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/adr/pr...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/adr/pr...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/adr/pr...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/adr/protected/controllers/PriceController.php(128): CController->render('index', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): PriceController->actionIndex()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('price')
+#28 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/adr/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/adr/index.php?r=price
+HTTP_REFERER=http://localhost/adr/index.php?r=site/contact
+---
+2014/03/19 02:03:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/adr/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/adr/index.php?r=login
+HTTP_REFERER=http://localhost/adr/
+---
+2014/03/20 08:33:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ricozy.price' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `price`.
+in /var/www/adr/protected/controllers/FrontEndController.php (44)
+in /var/www/adr/index.php (13)
+2014/03/20 08:33:52 [error] [exception.CDbException] exception 'CDbException' with message 'The table "price" for active record class "Price" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Price))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /var/www/adr/protected/controllers/FrontEndController.php(44): CActiveRecord->findAll()
+#5 /var/www/yii/framework/web/actions/CInlineAction.php(49): FrontEndController->actionPrice()
+#6 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('price')
+#10 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('FrontEnd/price')
+#11 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /var/www/adr/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/adr/index.php?r=FrontEnd/price
+HTTP_REFERER=http://localhost/adr/
+---
+2014/03/20 08:36:26 [error] [exception.CDbException] exception 'CDbException' with message 'Column name must be either a string or an array.' in /var/www/yii/framework/db/schema/CDbCommandBuilder.php:828
+Stack trace:
+#0 /var/www/yii/framework/db/schema/CDbCommandBuilder.php(621): CDbCommandBuilder->createInCondition(Object(CMysqlTableSchema), NULL, Array, '`t`.')
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1485): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '', '', Array, '`t`.')
+#2 /var/www/adr/protected/controllers/AboutController.php(155): CActiveRecord->findByPk('')
+#3 /var/www/adr/protected/controllers/AboutController.php(55): AboutController->loadModel('')
+#4 [internal function]: AboutController->actionView('')
+#5 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(AboutController), Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(AboutController), Object(ReflectionMethod), Array)
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/view')
+#17 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /var/www/adr/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/adr/index.php?r=about/view&id=
+HTTP_REFERER=http://localhost/adr/index.php?r=about/create
+---
+2014/03/20 08:37:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `about` (`content`) VALUES (:yp0).
+in /var/www/adr/protected/controllers/AboutController.php (73)
+in /var/www/adr/index.php (13)
+2014/03/20 08:37:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `about` (`content`) VALUES (:yp0)' in /var/www/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /var/www/adr/protected/controllers/AboutController.php(73): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): AboutController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about/create')
+#14 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/adr/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/adr/index.php?r=about/create
+HTTP_REFERER=http://localhost/adr/index.php?r=about/create
+---
+2014/03/20 09:03:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ricozy.price' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `price`.
+in /var/www/adr/protected/views/price/index.php (20)
+in /var/www/adr/protected/controllers/PriceController.php (128)
+in /var/www/adr/index.php (13)
+2014/03/20 09:03:20 [error] [exception.CDbException] exception 'CDbException' with message 'The table "price" for active record class "Price" cannot be found in the database.' in /var/www/yii/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Price))
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 /var/www/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 /var/www/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#8 /var/www/yii/framework/zii/widgets/CListView.php(211): CBaseListView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): CListView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 /var/www/adr/protected/views/price/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/adr/pr...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/adr/pr...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/adr/pr...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#16 /var/www/adr/protected/controllers/PriceController.php(128): CController->render('index', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): PriceController->actionIndex()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('price')
+#28 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /var/www/adr/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/adr/index.php?r=price
+HTTP_REFERER=http://localhost/adr/index.php?r=site/contact
+---
+2014/03/29 01:48:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/
+---
+2014/03/29 01:50:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/
+---
+2014/03/29 01:54:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/index.php?gii
+---
+2014/03/29 01:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/
+---
+2014/03/29 01:57:35 [error] [php] include(LoginForm.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/lpfh/protected/controllers/SiteController.php(81): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/lpfh/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh/index.php?r=site/login
+in /var/www/lpfh/protected/controllers/SiteController.php (81)
+in /var/www/lpfh/index.php (13)
+2014/03/29 02:09:32 [error] [exception.CException] exception 'CException' with message 'AuthUser and its behaviors do not have a method or closure named "encrypt".' in /var/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('encrypt', Array)
+#1 /var/www/lpfh/protected/components/UserIdentity.php(27): CActiveRecord->__call('encrypt', Array)
+#2 /var/www/lpfh/protected/components/UserIdentity.php(27): AuthUser->encrypt('rinjani')
+#3 /var/www/lpfh/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /var/www/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 /var/www/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /var/www/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /var/www/lpfh/protected/controllers/SiteController.php(95): CModel->validate()
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /var/www/lpfh/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/lpfh/index.php?r=site/login
+HTTP_REFERER=http://localhost/lpfh/index.php?r=site/login
+---
+2014/03/29 02:13:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/index.php
+HTTP_REFERER=http://localhost/lpfh/index.php?r=site
+---
