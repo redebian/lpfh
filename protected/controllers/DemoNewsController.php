@@ -8,7 +8,7 @@ class DemoNewsController extends Controller
 	 */
 	public $layout='//layouts/column2';
 
-	const URLUPLOAD = '../images/news/';
+	const URLUPLOAD = '/../images/';
 
 	/**
 	 * @return array action filters
@@ -62,26 +62,22 @@ class DemoNewsController extends Controller
 	public function actionCreate()
 	{
 		$model=new DemoNews;
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['DemoNews']))
 		{
-			$cekfile = $model->image=CUploadFile::getInstance($model, 'image');
-
-			if(empty($cekfile))
+			#get datetime now
+			$now = date("Y-m-d H:i:s");
+			$model->attributes=$_POST['DemoNews'];
+			$model->create=$now;
+			$model->update=$now;
+			$model->image=CUploadedFile::getInstance($model, 'image');
+			// $model->image=CUploadedFile::getInstance($model, 'image');
+			if($model->save())
 			{
-				$model->attributes=$_POST['DemoNews'];
-				$model->save();
-			}
-			else
-			{
-				$model->attributes=$_POST['DemoNews'];
-				$model->image=CUploadFile::getInstance($model, 'image');
-
-				if($model->save())
-				{
-					$model->image->saveAs(Yii::app()->basePath.self::URLUPLOAD.$model->image.'');
-					$this->redirect(array('demoNews'));
-				}
+				$model->image->saveAs(Yii::app()->basePath.self::URLUPLOAD.$model->image.'');
+				Yii::app()->user->setFlash('success', 'Success add new news');
+				$this->redirect(array('index'));
 			}
 		}
 

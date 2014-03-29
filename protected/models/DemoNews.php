@@ -31,7 +31,7 @@ class DemoNews extends CActiveRecord
 		return array(
 			array('title, description, image, create, update', 'required'),
 			array('title', 'length', 'max'=>50),
-			array('image', 'file', 'types'=>'jpg, gif, png'),
+			array('image', 'file', 'types'=>'jpg, gif, png', 'on'=>'update', 'on'=>'insert'),
 			array('id, title, description, image, create, update', 'safe', 'on'=>'search'),
 		);
 	}
