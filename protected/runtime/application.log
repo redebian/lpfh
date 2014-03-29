@@ -1,0 +1,72 @@
+2014/03/30 00:20:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh2/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh2/
+---
+2014/03/30 00:21:50 [error] [php] include(CUploadFile.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/lpfh2/protected/controllers/DemoNewsController.php(68): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): DemoNewsController->actionCreate()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(133): DemoNewsController->runAction()
+#4 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/yii/framework/web/filters/CInlineFilter.php(58): DemoNewsController->filterAccessControl()
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): DemoNewsController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): DemoNewsController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/lpfh2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh2/index.php?r=demoNews/create
+in /var/www/lpfh2/protected/controllers/DemoNewsController.php (68)
+in /var/www/lpfh2/index.php (13)
+2014/03/30 00:22:40 [error] [php] include(CUploadFile.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/lpfh2/protected/controllers/DemoNewsController.php(68): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): DemoNewsController->actionCreate()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/filters/CFilterChain.php(133): DemoNewsController->runAction()
+#4 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /var/www/yii/framework/web/filters/CInlineFilter.php(58): DemoNewsController->filterAccessControl()
+#7 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /var/www/yii/framework/web/CController.php(265): DemoNewsController->runActionWithFilters()
+#10 /var/www/yii/framework/web/CWebApplication.php(282): DemoNewsController->run()
+#11 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /var/www/lpfh2/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh2/index.php?r=demoNews/create
+in /var/www/lpfh2/protected/controllers/DemoNewsController.php (68)
+in /var/www/lpfh2/index.php (13)
+2014/03/30 02:11:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/
+---
+2014/03/30 02:11:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/index.php
+HTTP_REFERER=http://localhost/lpfh/
+---
+2014/03/30 02:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "FrontEnd".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /var/www/lpfh/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/lpfh/index.php
+HTTP_REFERER=http://localhost/lpfh/index.php?r=site/login
+---
