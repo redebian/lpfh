@@ -451,3 +451,152 @@ in /var/www/lpfh/index.php (13)
 2014/03/30 02:27:55 [warning] [application] Failed to set unsafe attribute "image" of "DemoNews".
 in /var/www/lpfh/protected/controllers/DemoNewsController.php (71)
 in /var/www/lpfh/index.php (13)
+2014/03/31 00:11:53 [warning] [application] Failed to set unsafe attribute "image" of "DemoNews".
+in /var/www/lpfh/protected/controllers/DemoNewsController.php (71)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:12:53 [warning] [application] Failed to set unsafe attribute "image" of "DemoNews".
+in /var/www/lpfh/protected/controllers/DemoNewsController.php (71)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:36:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Page".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('Page')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Page')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('staticPage/Page')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lpfh/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lpfh/index.php?r=staticPage/Page
+---
+2014/03/31 00:37:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "page".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('page')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('staticPage/page')
+#3 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /var/www/lpfh/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/lpfh/index.php?r=staticPage/page
+---
+2014/03/31 00:37:56 [error] [php] include(Spage.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/lpfh/protected/controllers/SiteController.php(106): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionPage()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/lpfh/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh/index.php?r=site/page
+in /var/www/lpfh/protected/controllers/SiteController.php (106)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:38:42 [error] [php] include(Spage.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /var/www/lpfh/protected/controllers/SiteController.php(106): spl_autoload_call()
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionPage()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#4 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/lpfh/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh/index.php?r=site/page
+in /var/www/lpfh/protected/controllers/SiteController.php (106)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:39:17 [error] [php] Undefined index: view (/var/www/lpfh/protected/controllers/SiteController.php:106)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/lpfh/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh/index.php?r=site/page
+in /var/www/lpfh/protected/controllers/SiteController.php (106)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:41:29 [error] [php] Undefined index: view (/var/www/lpfh/protected/controllers/SiteController.php:106)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/lpfh/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh/index.php?r=site/page
+in /var/www/lpfh/protected/controllers/SiteController.php (106)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:42:41 [error] [php] Undefined index: view (/var/www/lpfh/protected/controllers/SiteController.php:109)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/lpfh/index.php(13): CWebApplication->run()
+REQUEST_URI=/lpfh/index.php?r=site/page
+in /var/www/lpfh/protected/controllers/SiteController.php (109)
+in /var/www/lpfh/index.php (13)
+2014/03/31 00:43:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "http://localhost/lpfh/index.php?r=lpfh/index.php?r=site/page".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lpfh/protected/controllers/SiteController.php(109): CWebApplication->runController('http://localhos...')
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionPage()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/lpfh/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/lpfh/index.php?r=site/page
+---
+2014/03/31 10:27:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "http://localhost/lpfh/index.php?r=lpfh/index.php?r=site/page".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/lpfh/protected/controllers/SiteController.php(109): CWebApplication->runController('http://localhos...')
+#1 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionPage()
+#2 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 /var/www/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/lpfh/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/lpfh/index.php?r=site/page
+---
+2014/03/31 10:41:24 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (70)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:41:30 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (70)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:42:06 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (70)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:42:44 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (72)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:42:51 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (72)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:45:34 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (174)
+in /var/www/lpfh/protected/controllers/StaticPageController.php (68)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:45:35 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (174)
+in /var/www/lpfh/protected/controllers/StaticPageController.php (68)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:45:35 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (174)
+in /var/www/lpfh/protected/controllers/StaticPageController.php (68)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:45:39 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (174)
+in /var/www/lpfh/protected/controllers/StaticPageController.php (68)
+in /var/www/lpfh/index.php (13)
+2014/03/31 10:45:43 [warning] [application] Failed to set unsafe attribute "image" of "StaticPage".
+in /var/www/lpfh/protected/controllers/StaticPageController.php (72)
+in /var/www/lpfh/index.php (13)

@@ -98,9 +98,19 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
+	
+	public function actionPage() 
+	{
+	    if(empty($_GET['view']))
+	        $this->actionIndex();
+	    $model = StaticPage::model()->findByUrl(Yii::app()->createAbsoluteUrl(Yii::app()->request->url));
+	// if page is not found, then run a controller with that name
+	    if ($model === NULL)
+	        Yii::app()->runController(Yii::app()->createAbsoluteUrl(Yii::app()->request->url));
+	    else
+	        $this->render('spages/spages', array('model'=>$model));
+	}
+
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
