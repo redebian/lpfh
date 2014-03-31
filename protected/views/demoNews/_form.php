@@ -22,11 +22,18 @@
 		<?php echo $form->error($model,'title'); ?>
 	</div>
 
+
+<script src="<?php echo Yii::app()->baseUrl.'/ckeditor/ckeditor.js'; ?>"></script>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50, 'id'=>'editor1')); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
+
+<script type="text/javascript">
+    CKEDITOR.replace( 'editor1' );
+</script>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'image'); ?>
